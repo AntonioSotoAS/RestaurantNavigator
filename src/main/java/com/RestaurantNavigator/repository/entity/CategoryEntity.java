@@ -1,20 +1,19 @@
-package com.RestaurantNavigator.domain;
+package com.RestaurantNavigator.repository.entity;
 
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "category")
+public class CategoryEntity {
 
-public class Category{
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_category")
     private int idCategory;
 
     private String name;
 
     private String photo;
-
-    public Category(int idCategory, String name, String photo) {
-        this.idCategory = idCategory;
-        this.name = name;
-        this.photo = photo;
-    }
 
     public int getIdCategory() {
         return idCategory;
@@ -38,14 +37,5 @@ public class Category{
 
     public void setPhoto(String photo) {
         this.photo = photo;
-    }
-
-    @Override
-    public String toString() {
-        return "Category{" +
-                "idCategory=" + idCategory +
-                ", name='" + name + '\'' +
-                ", photo='" + photo + '\'' +
-                '}';
     }
 }
