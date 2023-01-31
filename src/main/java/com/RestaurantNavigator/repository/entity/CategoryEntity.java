@@ -11,8 +11,10 @@ public class CategoryEntity {
     @Column(name = "id_category")
     private int idCategory;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "photo")
     private String photo;
 
     public int getIdCategory() {

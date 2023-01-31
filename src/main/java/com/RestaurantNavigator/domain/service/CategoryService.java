@@ -18,8 +18,8 @@ public class CategoryService {
         return categoryRepository.findAllCategories();
     }
 
-    public Optional<Category> getCategoryId(int category){
-        return categoryRepository.findByCategoryId(category);
+    public Optional<Category> getCategoryId(int idCategory){
+        return categoryRepository.findByCategoryId(idCategory);
     }
 
     public Optional<Category> getByCategoryName(String name){

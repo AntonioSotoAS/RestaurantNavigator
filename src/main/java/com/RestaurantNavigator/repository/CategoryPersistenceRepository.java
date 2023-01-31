@@ -23,31 +23,40 @@ public class CategoryPersistenceRepository implements CategoryRepository {
 
     @Override
     public List<Category> findAllCategories() {
-        return categoryMapper.toCategories((List<Category>) categoryCrudRepository.findAll());
+        return categoryMapper.toCategories((List<CategoryEntity>) categoryCrudRepository.findAll());
     }
 
     @Override
-    public Optional<Category> findByCategoryId(int category) {
-        return Optional.empty();
+    public Optional<Category> findByCategoryId(int idCategory) {
+        return categoryCrudRepository.findByIdCategory(idCategory)
+                .map(category -> categoryMapper.toCategory(category));
     }
 
     @Override
     public Optional<Category> findByCategoryName(String name) {
-        return Optional.empty();
+        return categoryCrudRepository.findByName(name)
+                .map(category -> categoryMapper.toCategory(category));
     }
 
     @Override
     public Category save(Category category) {
-        return null;
+        CategoryEntity categoryEntity = categoryMapper.toCategoryEntity(category);
+        return categoryMapper.toCategory(categoryCrudRepository.save(categoryEntity));
     }
 
     @Override
     public Category update(Category category) {
-        return null;
+        return findByCategoryId(category.getIdCategory())
+                .map(categoryUpdate -> {
+                    categoryUpdate.setName(category.getName());
+                    categoryUpdate.setPhoto(category.getPhoto());
+                    CategoryEntity categoryEntity = categoryMapper.toCategoryEntity(categoryUpdate);
+                    return save(categoryMapper.toCategory(categoryEntity));
+                }).orElse(null);
     }
 
     @Override
     public void delete(int categoryId) {
-
+        categoryCrudRepository.deleteById(categoryId);
     }
 }

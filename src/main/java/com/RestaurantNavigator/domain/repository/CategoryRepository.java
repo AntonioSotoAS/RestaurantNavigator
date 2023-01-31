@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface CategoryRepository {
     List<Category> findAllCategories();
-    Optional<Category> findByCategoryId(int category);
+    Optional<Category> findByCategoryId(int idCategory);
     Optional<Category> findByCategoryName(String name);
     Category save(Category category);
     Category update(Category category);
