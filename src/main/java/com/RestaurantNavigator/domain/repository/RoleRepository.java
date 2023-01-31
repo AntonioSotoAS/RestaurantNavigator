@@ -11,9 +11,9 @@ import java.util.Optional;
 @Repository
 public interface RoleRepository {
     Optional<List<Role>> findAllRoles();
-    Optional<Role> findByRoleId(Role role);
+    Optional<Role> findByRoleId(int idRole);
     Optional<Role> findByTypeRole(String role);
-    void save(Role role);
-    void update(Role role);
-    void delete(Role role);
+    Role save(Role role);
+    Role update(Role role);
+    void delete(int idRole);
 }

@@ -12,10 +12,10 @@ import java.util.Optional;
 public interface UserRepository {
 
     Optional<List<User>> findAllUsers();
-    Optional<User> findByUserId(User user);
+    Optional<User> findByUserId(int idUser);
     Optional<User> findByUser(String user);
-    void save(User user);
-    void update(User user);
-    void delete(User user);
+    User save(User user);
+    User update(User user);
+    void delete(int idUser);
 
 }

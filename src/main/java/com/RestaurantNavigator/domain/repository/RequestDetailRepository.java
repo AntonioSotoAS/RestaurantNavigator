@@ -12,10 +12,9 @@ import java.util.Optional;
 public interface RequestDetailRepository {
 
     Optional<List<RequestDetail>> findAllRequestDetails();
-    Optional<RequestDetail> findByRequestDetailId(RequestDetail requestDetail);
     Optional<RequestDetail> findByIdRequest(int idRequest);
-    void save(RequestDetail requestDetail);
-    void update(RequestDetail requestDetail);
-    void delete(RequestDetail requestDetail);
+    RequestDetail save(RequestDetail requestDetail);
+    RequestDetail update(RequestDetail requestDetail);
+    void delete(int idRequestDetail);
 
 }
