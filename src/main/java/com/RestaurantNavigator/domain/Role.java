@@ -5,20 +5,20 @@ package com.RestaurantNavigator.domain;
 public class Role {
 
 
-    private int role;
+    private int idRole;
     private String typeRole;
 
-    public Role(int role, String typeRole) {
-        this.role = role;
+    public Role(int idRole, String typeRole) {
+        this.idRole = idRole;
         this.typeRole = typeRole;
     }
 
-    public int getRole() {
-        return role;
+    public int getIdRole() {
+        return idRole;
     }
 
-    public void setRole(int role) {
-        this.role = role;
+    public void setIdRole(int idRole) {
+        this.idRole = idRole;
     }
 
     public String getTypeRole() {
@@ -27,13 +27,5 @@ public class Role {
 
     public void setTypeRole(String typeRole) {
         this.typeRole = typeRole;
-    }
-
-    @Override
-    public String toString() {
-        return "Role{" +
-                "role=" + role +
-                ", typeRole='" + typeRole + '\'' +
-                '}';
     }
 }

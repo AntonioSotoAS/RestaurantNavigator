@@ -8,16 +8,16 @@ public class Request {
 
     private User idUser;
 
-    private String estado;
+    private String state;
 
     private Date update_at;
 
     private Date create_at;
 
-    public Request(int idRequest, User idUser, String estado, Date update_at, Date create_at) {
+    public Request(int idRequest, User idUser, String state, Date update_at, Date create_at) {
         this.idRequest = idRequest;
         this.idUser = idUser;
-        this.estado = estado;
+        this.state = state;
         this.update_at = update_at;
         this.create_at = create_at;
     }
@@ -38,12 +38,12 @@ public class Request {
         this.idUser = idUser;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getState() {
+        return state;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setState(String estado) {
+        this.state = state;
     }
 
     public Date getUpdate_at() {
@@ -67,7 +67,7 @@ public class Request {
         return "Request{" +
                 "idRequest=" + idRequest +
                 ", idUser=" + idUser +
-                ", estado='" + estado + '\'' +
+                ", state='" + state + '\'' +
                 ", update_at=" + update_at +
                 ", create_at=" + create_at +
                 '}';

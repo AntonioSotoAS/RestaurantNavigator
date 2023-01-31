@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "order_detail")
-public class OrderDetail {
+public class OrderDetailEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,5 +28,29 @@ public class OrderDetail {
 
     public void setIdOrderDetail(int idOrderDetail) {
         this.idOrderDetail = idOrderDetail;
+    }
+
+    public ProductEntity getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(ProductEntity idProduct) {
+        this.idProduct = idProduct;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public OrderEntity getIdOrder() {
+        return idOrder;
+    }
+
+    public void setIdOrder(OrderEntity idOrder) {
+        this.idOrder = idOrder;
     }
 }

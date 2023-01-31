@@ -1,6 +1,5 @@
 package com.RestaurantNavigator.repository.crud;
 
-import com.RestaurantNavigator.domain.Category;
 import com.RestaurantNavigator.repository.entity.CategoryEntity;
 import org.springframework.data.repository.CrudRepository;
 
