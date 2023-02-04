@@ -1,6 +1,5 @@
 package com.RestaurantNavigator.domain.service;
 
-import com.RestaurantNavigator.domain.Product;
 import com.RestaurantNavigator.domain.RequestDetail;
 import com.RestaurantNavigator.domain.repository.RequestDetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class RequestDetailRepositoryService {
+public class RequestDetailService {
 
     @Autowired
     private RequestDetailRepository requestDetailRepository;
