@@ -10,6 +10,9 @@ public interface OrderCrudRepository extends CrudRepository<OrderEntity,Integer>
 
     Optional<OrderEntity> findByIdOrder(int idOrder);
 
+    Optional<OrderEntity> findByIdUser(int idUser);
+
+
 
 
 }

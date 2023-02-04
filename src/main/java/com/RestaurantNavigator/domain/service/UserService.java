@@ -15,7 +15,7 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public Optional<List<User>> getAll(){
+    public List<User> getAll(){
         return userRepository.findAllUsers();
     }
 

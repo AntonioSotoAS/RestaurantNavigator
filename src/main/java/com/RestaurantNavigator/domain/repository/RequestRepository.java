@@ -9,8 +9,10 @@ import java.util.Optional;
 
 @Repository
 public interface RequestRepository {
-    Optional<List<Request>> findAllRequests();
-    Optional<Request> findByUser(int idUser);
+    List<Request> findAllRequests();
+
+    Optional<Request> findByIdRequest(int idRequest);
+    Optional<Request> findIdByUser(int idUser);
     Request save(Request request);
     Request update(Request request);
     void delete(int idRequest);

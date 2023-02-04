@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface RoleRepository {
-    Optional<List<Role>> findAllRoles();
+    List<Role> findAllRoles();
     Optional<Role> findByRoleId(int idRole);
     Optional<Role> findByTypeRole(String role);
     Role save(Role role);

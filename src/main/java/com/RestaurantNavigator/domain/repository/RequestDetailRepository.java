@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface RequestDetailRepository {
 
-    Optional<List<RequestDetail>> findAllRequestDetails();
+    List<RequestDetail> findAllRequestDetails();
     Optional<RequestDetail> findByIdRequest(int idRequest);
     RequestDetail save(RequestDetail requestDetail);
     RequestDetail update(RequestDetail requestDetail);

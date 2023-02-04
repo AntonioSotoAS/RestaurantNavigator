@@ -15,7 +15,7 @@ public class RequestDetailRepositoryService {
     @Autowired
     private RequestDetailRepository requestDetailRepository;
 
-    public Optional<List<RequestDetail>> getAll(){
+    public List<RequestDetail> getAll(){
         return requestDetailRepository.findAllRequestDetails();
     }
 

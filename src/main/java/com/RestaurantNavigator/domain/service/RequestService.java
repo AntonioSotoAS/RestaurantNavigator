@@ -15,12 +15,16 @@ public class RequestService {
     @Autowired
     private RequestRepository requestRepository;
 
-    public Optional<List<Request>> getAll(){
+    public List<Request> getAll(){
         return requestRepository.findAllRequests();
     }
 
     public Optional<Request> getRequestId(int idRequest){
-        return requestRepository.findByUser(idRequest);
+        return requestRepository.findByIdRequest(idRequest);
+    }
+
+    public Optional<Request> getRequestUserId(int idRequest){
+        return requestRepository.findIdByUser(idRequest);
     }
 
     public Request  save(Request request){

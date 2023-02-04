@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface ProductRepository {
 
-    Optional<List<Product>> findAllProducts();
+    List<Product> findAllProducts();
     Optional<Product> findByProductId(int idProduct);
     Optional<Product> findByProductName(String name);
     Product save(Product product);

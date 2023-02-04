@@ -15,7 +15,7 @@ public class RoleService {
     @Autowired
     RoleRepository roleRepository;
 
-    public Optional<List<Role>> getAll(){
+    public List<Role> getAll(){
         return roleRepository.findAllRoles();
     }
 
